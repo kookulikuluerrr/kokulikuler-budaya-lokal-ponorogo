@@ -1,0 +1,428 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #e3f2fd 0%, #f1f8e9 100%);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+#navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f39c12;
+    transition: transform 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+#navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+#navbar li {
+    margin-left: 2rem;
+}
+
+#navbar a {
+    font-weight: 500;
+    transition: color 0.3s, transform 0.3s;
+}
+
+#navbar a:hover {
+    color: #f39c12;
+    transform: translateY(-2px);
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Main Sections */
+main {
+    min-height: 100vh;
+}
+
+section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+section.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#home {
+    background: linear-gradient(135deg, rgba(231, 76, 60, 0.8) 0%, rgba(243, 156, 18, 0.8) 100%), url('reog-traveloka/OIP (1).webp') no-repeat center center / cover;
+    color: white;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ponorogo-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    border-right: 2px solid white;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: white; }
+}
+
+.ponorogo-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #f39c12;
+    color: white;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #e67e22;
+    transform: translateY(-3px);
+}
+
+.budaya-section {
+    background-color: #ffebee;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.kuliner-section {
+    background-color: #fffde7;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.destinations-section {
+    background-color: #e8f5e8;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.events-section {
+    background-color: #e3f2fd;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.accommodations-section {
+    background-color: #f3e5f5;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.travel-guide-section {
+    background-color: #fff3e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.gallery-section {
+    background-color: #fce4ec;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.lokasi-section {
+    background-color: #e0f2f1;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.about-section {
+    background-color: #f3e5f5;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.destinations-section h2,
+.events-section h2,
+.accommodations-section h2,
+.travel-guide-section h2,
+.gallery-section h2,
+.budaya-section h2,
+.kuliner-section h2,
+.about-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+}
+
+.budaya-grid,
+.kuliner-grid,
+.destinations-grid,
+.events-grid,
+.accommodations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.budaya-item,
+.kuliner-item,
+.destination-item,
+.event-item,
+.accommodation-item {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.budaya-item:hover,
+.kuliner-item:hover,
+.destination-item:hover,
+.event-item:hover,
+.accommodation-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+
+.budaya-item h3,
+.kuliner-item h3,
+.destination-item h3,
+.event-item h3,
+.accommodation-item h3 {
+    margin-bottom: 1rem;
+    color: #f39c12;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+.guide-content h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #f39c12;
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    color: #666;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.lokasi-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.lokasi-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.lokasi-description p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.lokasi-description strong {
+    color: #f39c12;
+}
+
+.lokasi-map iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 8px;
+}
+
+/* Gallery Modal */
+#gallery-modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    position: relative;
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    animation: zoom 0.6s;
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+}
+
+#modal-image {
+    width: 100%;
+    height: auto;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #navbar {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    #navbar ul {
+        margin: 1rem 0;
+    }
+
+    #navbar li {
+        margin: 0 1rem;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    #home h1 {
+        font-size: 2rem;
+    }
+
+    .ponorogo-content p {
+        font-size: 1rem;
+    }
+
+    .budaya-grid,
+    .kuliner-grid,
+    .destinations-grid,
+    .events-grid,
+    .accommodations-grid,
+    .gallery-grid,
+    .lokasi-content {
+        grid-template-columns: 1fr;
+    }
+}
